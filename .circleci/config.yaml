@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   check_python_format:
     docker:
-      - image: circleci/python:3.9
+      - image: circleci/python:3.10
     steps:
       - checkout
       - run:
@@ -15,7 +15,7 @@ jobs:
             ufmt check .
   check_type_annotation:
     docker:
-      - image: circleci/python:3.9
+      - image: circleci/python:3.10
     steps:
       - checkout
       - restore_cache:
